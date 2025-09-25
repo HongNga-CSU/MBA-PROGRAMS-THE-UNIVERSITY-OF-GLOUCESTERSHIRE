@@ -22,7 +22,7 @@
         /* --- Header & Banner --- */
         .hero-banner {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://raw.githubusercontent.com/HongNga-CSU/MBA-PROGRAMS-THE-UNIVERSITY-OF-GLOUCESTERSHIRE-UOG-/main/UOG-hero-banner-slider-01a-scaled.png');
-            height: 70vh; /* Tăng chiều cao banner một chút */
+            height: 70vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -32,32 +32,44 @@
             text-align: center;
             color: #fff;
             
-            /* === CẬP NHẬT: ĐẨY VĂN BẢN XUỐNG DƯỚI === */
             align-items: flex-end; 
-            padding-bottom: 5vh; 
+            /* === CẬP NHẬT: TĂNG PADDING ĐỂ HẠ THẤP VĂN BẢN XUỐNG NỮA === */
+            padding-bottom: 8vh; 
         }
         .hero-text {
             max-width: 800px;
         }
-        .hero-text h1 {
-            /* === CẬP NHẬT: TĂNG CỠ CHỮ VÀ LÀM NỔI BẬT === */
-            font-size: 3.8em; 
-            margin-bottom: 15px;
+        /* === CẬP NHẬT: CSS CHO TIÊU ĐỀ CHÍNH === */
+        .hero-text .main-title {
+            font-size: 3.5em; 
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-transform: uppercase; /* Tự động viết hoa */
+            line-height: 1.0; /* Nén khoảng cách dòng */
+            margin: 0;
         }
-        .hero-text h2 {
-            /* === CẬP NHẬT: TĂNG CỠ CHỮ VÀ LÀM NỔI BẬT === */
-            font-size: 2em;
+        /* === CẬP NHẬT: CSS CHO DÒNG (MBA) === */
+        .hero-text .sub-title {
+            font-size: 2.2em;
+            font-weight: 500;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            line-height: 1.0;
+            margin-bottom: 15px; /* Khoảng cách tới dòng tiếp theo */
+        }
+        /* === CẬP NHẬT: CSS CHO TÊN TRƯỜNG === */
+        .hero-text .university-name {
+            font-size: 1.5em;
             font-weight: 400;
-            margin-bottom: 20px;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            line-height: 1.0;
+            margin-bottom: 20px;
         }
+        /* === CẬP NHẬT: CSS CHO ĐOẠN MÔ TẢ === */
         .hero-text p {
-            /* === CẬP NHẬT: TĂNG CỠ CHỮ VÀ LÀM NỔI BẬT === */
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-            max-width: 750px; /* Giới hạn chiều rộng cho đẹp mắt */
+            max-width: 500px; /* Thu hẹp chiều rộng để ngắt dòng như yêu cầu */
             margin: 0 auto;
+            line-height: 1.4; /* Điều chỉnh line-height cho đoạn văn dễ đọc hơn */
         }
         /* --- Sections --- */
         .section {
@@ -171,8 +183,9 @@
 
     <header class="hero-banner">
         <div class="hero-text">
-            <h1>Thạc sĩ Quản trị Kinh doanh (MBA)</h1>
-            <h2>Đại học Gloucestershire - Anh Quốc</h2>
+            <h1 class="main-title">Thạc sĩ Quản trị Kinh doanh</h1>
+            <h2 class="sub-title">(MBA)</h2>
+            <h2 class="university-name">Đại học Gloucestershire - Anh Quốc</h2>
             <p>Khóa học giúp học viên phát triển tư duy sáng tạo trong kinh doanh, mang lại những đổi mới thực sự và giúp bạn trở thành một nhà lãnh đạo xuất sắc.</p>
         </div>
     </header>
