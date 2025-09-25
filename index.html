@@ -21,56 +21,18 @@
         }
         /* --- Header & Banner --- */
         .hero-banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://raw.githubusercontent.com/HongNga-CSU/MBA-PROGRAMS-THE-UNIVERSITY-OF-GLOUCESTERSHIRE-UOG-/main/UOG-hero-banner-slider-01a-scaled.png');
-            height: 70vh;
+            /* === CẬP NHẬT: Giảm độ đậm lớp phủ để ảnh sáng hơn === */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://raw.githubusercontent.com/HongNga-CSU/MBA-PROGRAMS-THE-UNIVERSITY-OF-GLOUCESTERSHIRE-UOG-/main/UOG-hero-banner-slider-01a-scaled.png');
+            height: 60vh; 
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            
-            align-items: flex-end; 
-            /* === CẬP NHẬT: TĂNG PADDING ĐỂ HẠ THẤP VĂN BẢN XUỐNG NỮA === */
-            padding-bottom: 8vh; 
+
+            /* === CẬP NHẬT: Thêm hiệu ứng làm ảnh sáng và sinh động hơn === */
+            filter: brightness(1.1) contrast(1.05);
         }
-        .hero-text {
-            max-width: 800px;
-        }
-        /* === CẬP NHẬT: CSS CHO TIÊU ĐỀ CHÍNH === */
-        .hero-text .main-title {
-            font-size: 3.5em; 
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            text-transform: uppercase; /* Tự động viết hoa */
-            line-height: 1.0; /* Nén khoảng cách dòng */
-            margin: 0;
-        }
-        /* === CẬP NHẬT: CSS CHO DÒNG (MBA) === */
-        .hero-text .sub-title {
-            font-size: 2.2em;
-            font-weight: 500;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            line-height: 1.0;
-            margin-bottom: 15px; /* Khoảng cách tới dòng tiếp theo */
-        }
-        /* === CẬP NHẬT: CSS CHO TÊN TRƯỜNG === */
-        .hero-text .university-name {
-            font-size: 1.5em;
-            font-weight: 400;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            line-height: 1.0;
-            margin-bottom: 20px;
-        }
-        /* === CẬP NHẬT: CSS CHO ĐOẠN MÔ TẢ === */
-        .hero-text p {
-            font-size: 1.1em;
-            text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-            max-width: 500px; /* Thu hẹp chiều rộng để ngắt dòng như yêu cầu */
-            margin: 0 auto;
-            line-height: 1.4; /* Điều chỉnh line-height cho đoạn văn dễ đọc hơn */
-        }
+        
         /* --- Sections --- */
         .section {
             padding: 40px 0;
@@ -99,10 +61,11 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             flex: 1;
             min-width: 280px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Thêm hiệu ứng đổ bóng khi hover */
         }
         .card h3 {
             color: #1a237e;
@@ -125,6 +88,19 @@
             position: absolute;
             left: 0;
         }
+
+        /* === CẬP NHẬT: Thêm hiệu ứng sinh động cho các đường link === */
+        .card a {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .card a:hover {
+            color: #0d47a1; /* Đổi sang màu xanh đậm hơn khi hover */
+            text-decoration: underline;
+        }
+
         /* --- Program Details Layout --- */
         .program-details {
             display: flex;
@@ -182,12 +158,6 @@
 <body>
 
     <header class="hero-banner">
-        <div class="hero-text">
-            <h1 class="main-title">Thạc sĩ Quản trị Kinh doanh</h1>
-            <h2 class="sub-title">(MBA)</h2>
-            <h2 class="university-name">Đại học Gloucestershire - Anh Quốc</h2>
-            <p>Khóa học giúp học viên phát triển tư duy sáng tạo trong kinh doanh, mang lại những đổi mới thực sự và giúp bạn trở thành một nhà lãnh đạo xuất sắc.</p>
-        </div>
     </header>
 
     <main>
@@ -201,30 +171,30 @@
                 <div class="card-container">
                     <div class="card">
                         <h3>Đại học Gloucestershire (UoG)</h3>
-                        <p>Là một trường đại học công lập có trụ sở tại Gloucestershire, Anh Quốc với hơn 180 năm kinh nghiệm trong lĩnh vực giáo dục.</p>
+                        [cite_start]<p>Là một trường đại học công lập có trụ sở tại Gloucestershire, Anh Quốc với hơn 180 năm kinh nghiệm trong lĩnh vực giáo dục. [cite: 7, 8]</p>
                         <ul>
-                            <li>Top 600 Đại học châu Âu (QS 2024).</li>
-                            <li>Top 10 tại Vương quốc Anh về hỗ trợ sinh viên quốc tế (ISB 2022).</li>
-                            <li>Hạng #91 theo The Complete University Guide 2025.</li>
-                            <li>96% sinh viên tốt nghiệp có việc làm hoặc học lên cao trong vòng 15 tháng.</li>
+                            [cite_start]<li>Top 600 Đại học châu Âu (QS 2024). [cite: 9]</li>
+                            [cite_start]<li>Top 10 tại Vương quốc Anh về hỗ trợ sinh viên quốc tế (ISB 2022). [cite: 9]</li>
+                            [cite_start]<li>Hạng #91 theo The Complete University Guide năm 2025. [cite: 9]</li>
+                            [cite_start]<li>96% sinh viên tốt nghiệp có việc làm hoặc học lên cao trong vòng 15 tháng. [cite: 10]</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3>Hội đồng Khảo thí London (LEB)</h3>
-                        <p>Là tổ chức của Vương quốc Anh, đã đăng ký với UK Register of Learning Providers. LEB phối hợp cùng UoG nâng cấp chất lượng chương trình đào tạo, mang đến môi trường học tập và lộ trình nâng bằng quốc tế uy tín.</p>
+                        <p>Là tổ chức của Vương quốc Anh, đã đăng ký với UK Register of Learning Providers. [cite_start]LEB phối hợp cùng UoG nâng cấp chất lượng chương trình đào tạo, mang đến môi trường học tập và lộ trình nâng bằng quốc tế uy tín. [cite: 12, 18]</p>
                         <ul>
-                            <li>Phát triển mạng lưới học tập toàn cầu.</li>
-                            <li>Hơn 50 chương trình cấp đại học và sau đại học.</li>
-                            <li>Đối tác của nhiều trường Đại học tại Anh, Pháp, Úc và Hoa Kỳ.</li>
+                            [cite_start]<li>Phát triển mạng lưới học tập toàn cầu. [cite: 14]</li>
+                            [cite_start]<li>Có trên 50 chương trình cấp đại học và sau đại học. [cite: 15]</li>
+                            [cite_start]<li>Đối tác của nhiều trường Đại học tại Anh, Pháp, Úc và Hoa Kỳ. [cite: 15]</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3>Đại học Kinh tế & QTKD (TUEBA)</h3>
-                        <p>Thành viên của Đại học Thái Nguyên, TUEBA đã khẳng định được uy tín và vị thế vững chắc trong khu vực về đào tạo, nghiên cứu khoa học và hợp tác quốc tế.</p>
+                        [cite_start]<p>Thành viên của Đại học Thái Nguyên, TUEBA đã khẳng định được uy tín và vị thế vững chắc trong khu vực về đào tạo, nghiên cứu khoa học và hợp tác quốc tế. [cite: 23, 24]</p>
                         <ul>
-                            <li>Đi đầu trong việc mở rộng quan hệ hợp tác quốc tế.</li>
-                            <li>Không ngừng tăng quy mô đào tạo, đặc biệt là trình độ thạc sĩ, tiến sĩ.</li>
-                            <li>Nhiều công trình nghiên cứu được áp dụng hiệu quả vào thực tiễn.</li>
+                            [cite_start]<li>Đi đầu trong việc mở rộng quan hệ hợp tác quốc tế. [cite: 27]</li>
+                            [cite_start]<li>Không ngừng tăng quy mô đào tạo, đặc biệt là trình độ thạc sĩ, tiến sĩ. [cite: 25]</li>
+                            [cite_start]<li>Nhiều công trình nghiên cứu được áp dụng hiệu quả vào thực tiễn. [cite: 26]</li>
                         </ul>
                     </div>
                 </div>
@@ -238,16 +208,16 @@
                     <div class="detail-box">
                         <h3>Điều Kiện Đầu Vào</h3>
                         <ul>
-                            <li>Tốt nghiệp chương trình cử nhân đại học.</li>
-                            <li>Chứng chỉ tiếng Anh: IELTS 6.0, TOEFL ITP 500, iBT 75, hoặc Bậc 4 theo Khung năng lực 6 bậc của Việt Nam (hoặc tương đương).</li>
+                            [cite_start]<li>Tốt nghiệp chương trình cử nhân đại học. [cite: 31]</li>
+                            [cite_start]<li>Chứng chỉ tiếng Anh: IELTS 6.0, TOEFL ITP 500, iBT 75, hoặc Bậc 4 theo Khung năng lực 6 bậc của Việt Nam (hoặc tương đương). [cite: 32, 33]</li>
                         </ul>
                     </div>
                     <div class="detail-box">
                         <h3>Thông Tin Chung</h3>
                         <ul>
-                            <li><strong>Thời gian học:</strong> 15 tháng</li>
-                            <li><strong>Học phí toàn khóa (2025):</strong> 10,500 USD</li>
-                            <li><strong>Ngôn ngữ học tập:</strong> 100% bằng tiếng Anh</li>
+                            [cite_start]<li><strong>Thời gian học:</strong> 15 tháng [cite: 34]</li>
+                            [cite_start]<li><strong>Học phí toàn khóa (2025):</strong> 10,500 USD [cite: 42, 43]</li>
+                            [cite_start]<li><strong>Ngôn ngữ học tập:</strong> 100% bằng tiếng Anh [cite: 45]</li>
                         </ul>
                     </div>
                 </div>
@@ -257,7 +227,7 @@
                     <div class="program-details">
                         <div class="detail-box">
                             <h4>Giai đoạn 1: Chứng chỉ Chuyên nghiệp về Quản trị Kinh doanh (PDBA)</h4>
-                            <p>Học viên hoàn thành 8 môn học thuộc Chứng chỉ của LEB.</p>
+                            [cite_start]<p>Học viên hoàn thành 8 môn học thuộc Chứng chỉ Chuyên nghiệp về Quản trị Kinh doanh (PDBA) của LEB. [cite: 36]</p>
                             <table class="module-table">
                                 <thead>
                                     <tr>
@@ -280,10 +250,10 @@
                         </div>
                         <div class="detail-box">
                             <h4>Giai đoạn 2: Luận văn Tốt nghiệp</h4>
-                            <p>Sau khi hoàn thành giai đoạn 1, học viên sẽ tiếp tục thực hiện luận văn theo yêu cầu của Đại học Gloucestershire.</p>
+                            [cite_start]<p>Sau khi hoàn thành giai đoạn 1, học viên sẽ tiếp tục thực hiện luận văn theo yêu cầu của Đại học Gloucestershire. [cite: 39]</p>
                             <ul>
-                                <li><strong>Số tín chỉ:</strong> 60</li>
-                                <li><strong>Thời gian nghiên cứu tương đương:</strong> 600 giờ</li>
+                                [cite_start]<li><strong>Số tín chỉ:</strong> 60 [cite: 40]</li>
+                                [cite_start]<li><strong>Thời gian nghiên cứu tương đương:</strong> 600 giờ [cite: 40]</li>
                             </ul>
                         </div>
                     </div>
@@ -295,7 +265,7 @@
             <div class="container contact-info">
                 <h2 class="section-title">Liên Hệ Tư Vấn</h2>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
-                    UoG và LEB ủy quyền cho Viện Xúc tiến Phát triển Giáo dục (IPED) là đại diện tại Việt Nam, phối hợp cùng TUEBA để vận hành và giám sát chương trình.
+                    [cite_start]UoG và LEB ủy quyền cho Viện Xúc tiến Phát triển Giáo dục (IPED) là đại diện tại Việt Nam, phối hợp cùng TUEBA để vận hành và giám sát chương trình. [cite: 20]
                 </p>
                 <div class="card-container">
                     <div class="card">
@@ -311,9 +281,9 @@
                     <div class="card">
                         <h3>Trường Đại học Kinh tế & QTKD (TUEBA)</h3>
                         <p><strong>Trụ sở chính:</strong><br>
-                        Phường Tân Thịnh, TP. Thái Nguyên</p>
+                        Phường Tân Thịnh, TP. [cite_start]Thái Nguyên [cite: 28]</p>
                         <p><strong>Điện thoại:</strong><br>
-                        (+84) 2083-647-680</p>
+                        (+84) [cite_start]2083-647-680 [cite: 28]</p>
                     </div>
                 </div>
             </div>
